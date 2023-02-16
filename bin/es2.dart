@@ -1,6 +1,10 @@
-import 'package:es2/es2.dart' as es2;
+import 'package:es2/future_service.dart';
+import 'package:es2/future_service.dart' as future_service;
+import 'package:http/http.dart' as http;
+import 'dart:io';
+import 'dart:convert';
 
-void main(List<String> arguments) {
-  print('Hello world: ${es2.calculate()}!');
+void main(List<String> args) async {
+  QuoteService myQuote = QuoteService ();
+  myQuote.getQuote();
 }
-// prova commit
